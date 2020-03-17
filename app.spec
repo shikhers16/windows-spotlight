@@ -5,6 +5,8 @@ block_cipher = None
 
 added_files = [
          ( 'files/history.json', './files'),
+         ( 'files/user.json', './files'),
+         ( 'files/wallpaper.jpeg', './files'),
          ('icons/camera.png', './icons'),
          ('icons/heart.png', './icons'),
          ('icons/broken-heart.png', './icons'),
@@ -37,7 +39,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          console=False, icon='S:\\Shikher-Srivastava\\Fun\\Code\\windows-spotlight\\final\\spotlight.ico')
+          console=False, icon='S:\\Shikher-Srivastava\\Fun\\Code\\windows-spotlight\\windows-spotlight\\spotlight.ico')
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

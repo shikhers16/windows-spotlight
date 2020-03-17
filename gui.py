@@ -128,7 +128,7 @@ class GUI():
 
 	def previous(self):
 		print("PREVIOUS")
-		self.item = last(True)
+		self.item = last()
 		self.set_text()
 		self.update()
 

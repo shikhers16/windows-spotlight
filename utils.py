@@ -12,22 +12,22 @@ def change(data):
 	# Set as Wallpaper
 	set_wallpaper('files/wallpaper.jpeg')
 
-def last(new=False):
+# def last(new=False):
+# 	history = read_file('history')
+# 	history['next'] = history['current']
+# 	write_file('history', history)
+# 	if new:
+# 		change(history['last'])
+# 	return history['last']
+
+def prev():
 	history = read_file('history')
-	history['next'] = history['current']
-	write_file('history', history)
-	if new:
-		change(history['last'])
-	return history['last']
+	current = history['current']
+	return get_spotlight_data(current['number']-1, side="backward")
+	 
 
 def next():
 	history = read_file('history')
 	print("history")
-	if 'next' in history.keys():
-		print('next')
-		data = history['next']
-		del history['next']
-		write_file('history', history)
-		return data
-	else:
-		return get_spotlight_data()
+	number = history['current']['number']
+	return get_spotlight_data(number+1, side="forward")

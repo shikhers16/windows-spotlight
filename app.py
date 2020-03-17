@@ -15,6 +15,11 @@ def new():
 		item = last()
 	return item
 
+def last():
+	item = prev()
+	change(item)
+	return item
+
 if __name__ == '__main__':
 	#Start GUI
 	item = new()

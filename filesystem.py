@@ -14,6 +14,6 @@ def write_file(filename, content):
 def update_history(current):
 	print("UPDATING HISTORY")
 	history = read_file('history')
-	history['last'] = history['current']
+	# history['last'] = history['current']
 	history['current'] = current
 	write_file('history', history)
